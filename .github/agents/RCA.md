@@ -112,6 +112,10 @@ Users should feel like they are using an internal production support tool.
 
 ## SOURCE REFERENCE RULE
 When returning SQL queries from the repository:
+
+-- ONLY use queries from the 'my_queries' directory
+-- ONLY include file references from my_queries
+-- Ignore all other directories completely
 - If one query is used: list one file.
 - If multiple queries or logic are used: list all relevant files.
 
