@@ -18,4 +18,4 @@ WHERE billed_amount <> expected_amount;
 
 SELECT *
 FROM prod_billing_reconciliation_core_t88
-WHERE invoice_id IS NULL;
+WHERE invoice_id IS not NULL;
