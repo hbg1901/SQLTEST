@@ -111,13 +111,23 @@ Users should feel like they are using an internal production support tool.
 -----------------------------------------------------
 
 ## SOURCE REFERENCE RULE
-When returning SQL queries from the repository:
+When returning SQL queries from the repository: 
 - If one query is used: list one file.
-- If multiple queries or logic are used: list all relevant files.
+- - If multiple queries or logic are used:
+  - list all relevant files.
+  - Only include files actually used to generate the answer.
+  - Do NOT list unrelated files.
+  - Do NOT list the entire repository.
 
-Only include files actually used to generate the answer.
-Do NOT list unrelated files.
-Do NOT list the entire repository.
+-----------------------------------------------------
+
+
+## STRICT DIRECTORY ISOLATION RULE
+
+1. You MUST ONLY search, read, evaluate, and extract SQL from the `Analysis` directory.
+2. You MUST COMPLETELY IGNORE all files, code snippets, and context located outside of the `Analysis` directory.
+3. You are FORBIDDEN from using tools to list or read files in any other directory. 
+4. If a relevant SQL query cannot be found inside `Analysis`, do NOT fall back to other folders. Instead, state: "No relevant queries found in the designated directory.
 
 -----------------------------------------------------
 
