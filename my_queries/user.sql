@@ -1,5 +1,5 @@
 -- ============================================
--- SCENARIO: User lookup productions
+-- SCENARIO: User lookup productionss
 -- ============================================
 
 SELECT username,*
